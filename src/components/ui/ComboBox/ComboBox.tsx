@@ -1,5 +1,4 @@
 import { ChevronDown } from 'lucide-react';
-import React from 'react';
 import {
   ComboBox as AriaComboBox,
   ComboBoxProps as AriaComboBoxProps,
@@ -7,11 +6,12 @@ import {
   ListBoxItemProps,
   ValidationResult
 } from 'react-aria-components';
-import { Button } from './Button';
-import { Description, FieldError, FieldGroup, Input, Label } from './Field';
-import { DropdownItem, DropdownSection, DropdownSectionProps } from './ListBox';
-import { Popover } from './Popover';
-import { composeTailwindRenderProps } from './story.ts';
+import { Description, FieldError, FieldGroup, Input, Label } from '../Field/Field';
+import { composeTailwindRenderProps } from '../../../utils/story';
+import { Button } from '../Button/Button';
+import { Popover } from '../Popover/Popover';
+import { DropdownItem, DropdownSection, DropdownSectionProps } from '../ListBox/ListBox';
+
 
 export interface ComboBoxProps<T extends object> extends Omit<AriaComboBoxProps<T>, 'children'> {
   label?: string;

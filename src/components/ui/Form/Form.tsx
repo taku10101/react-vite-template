@@ -1,4 +1,3 @@
-import React from 'react';
 import { FormProps, Form as RACForm } from 'react-aria-components';
 import { twMerge } from 'tailwind-merge';
 

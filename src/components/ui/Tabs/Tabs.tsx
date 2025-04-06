@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   Tab as RACTab,
   TabList as RACTabList,
@@ -11,7 +11,7 @@ import {
   composeRenderProps
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { focusRing } from './story.ts';
+import { focusRing } from '../../../utils/story';
 
 const tabsStyles = tv({
   base: 'flex gap-4',
@@ -29,7 +29,7 @@ export function Tabs(props: TabsProps) {
       {...props}
       className={composeRenderProps(
         props.className,
-        (className, renderProps) => tabsStyles({...renderProps, className})
+        (className, renderProps) => tabsStyles({ ...renderProps, className })
       )} />
   );
 }
@@ -50,7 +50,7 @@ export function TabList<T extends object>(props: TabListProps<T>) {
       {...props}
       className={composeRenderProps(
         props.className,
-        (className, renderProps) => tabListStyles({...renderProps, className})
+        (className, renderProps) => tabListStyles({ ...renderProps, className })
       )} />
   );
 }
@@ -75,7 +75,7 @@ export function Tab(props: TabProps) {
       {...props}
       className={composeRenderProps(
         props.className,
-        (className, renderProps) => tabProps({...renderProps, className})
+        (className, renderProps) => tabProps({ ...renderProps, className })
       )} />
   );
 }
@@ -91,7 +91,7 @@ export function TabPanel(props: TabPanelProps) {
       {...props}
       className={composeRenderProps(
         props.className,
-        (className, renderProps) => tabPanelStyles({...renderProps, className})
+        (className, renderProps) => tabPanelStyles({ ...renderProps, className })
       )} />
   );
 }

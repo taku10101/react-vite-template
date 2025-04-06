@@ -1,5 +1,5 @@
 import { SearchIcon, XIcon } from 'lucide-react';
-import React from 'react';
+
 import {
   SearchField as AriaSearchField,
   SearchFieldProps as AriaSearchFieldProps,
@@ -7,7 +7,7 @@ import {
 } from 'react-aria-components';
 import { Button } from './Button';
 import { Description, FieldError, FieldGroup, Input, Label } from './Field';
-import { composeTailwindRenderProps } from './story.ts';
+import { composeTailwindRenderProps } from '../../../utils/story';
 
 export interface SearchFieldProps extends AriaSearchFieldProps {
   label?: string;

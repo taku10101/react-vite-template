@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   DateField as AriaDateField,
   DateFieldProps as AriaDateFieldProps,
@@ -9,8 +8,9 @@ import {
   ValidationResult
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { Description, FieldError, Label, fieldGroupStyles } from './Field';
-import { composeTailwindRenderProps } from './story.ts';
+import { composeTailwindRenderProps } from '../../../utils/story';
+import { Description, FieldError, fieldGroupStyles, Label } from '../Field/Field';
+
 
 export interface DateFieldProps<T extends DateValue> extends AriaDateFieldProps<T> {
   label?: string;
@@ -48,7 +48,7 @@ const segmentStyles = tv({
 
 export function DateInput(props: Omit<DateInputProps, 'children'>) {
   return (
-    <AriaDateInput className={renderProps => fieldGroupStyles({...renderProps, class: 'block min-w-[150px] px-2 py-1.5 text-sm'})} {...props}>
+    <AriaDateInput className={renderProps => fieldGroupStyles({ ...renderProps, class: 'block min-w-[150px] px-2 py-1.5 text-sm' })} {...props}>
       {(segment) => <DateSegment segment={segment} className={segmentStyles} />}
     </AriaDateInput>
   );

@@ -1,5 +1,5 @@
 import { Check, ChevronRight } from 'lucide-react';
-import React from 'react';
+
 import {
   Menu as AriaMenu,
   MenuItem as AriaMenuItem,
@@ -32,7 +32,7 @@ export function MenuItem(props: MenuItemProps) {
   let textValue = props.textValue || (typeof props.children === 'string' ? props.children : undefined);
   return (
     <AriaMenuItem textValue={textValue} {...props} className={dropdownItemStyles}>
-      {composeRenderProps(props.children, (children, {selectionMode, isSelected, hasSubmenu}) => <>
+      {composeRenderProps(props.children, (children, { selectionMode, isSelected, hasSubmenu }) => <>
         {selectionMode !== 'none' && (
           <span className="flex items-center w-4">
             {isSelected && <Check aria-hidden className="w-4 h-4" />}

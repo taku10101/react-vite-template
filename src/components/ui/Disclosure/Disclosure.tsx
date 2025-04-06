@@ -13,8 +13,8 @@ import {
 } from "react-aria-components";
 import { tv } from "tailwind-variants";
 import { ChevronRight } from "lucide-react";
-import { composeTailwindRenderProps, focusRing } from "./story.ts";
 import { DisclosureGroupStateContext } from "react-aria-components";
+import { composeTailwindRenderProps, focusRing } from "../../../utils/story";
 
 const disclosure = tv({
   base: "group min-w-64 border border-gray-200 dark:border-zinc-600 rounded-lg text-gray-900 dark:text-zinc-200",
@@ -79,7 +79,7 @@ export function DisclosureHeader({ children }: DisclosureHeaderProps) {
         slot="trigger"
         className={(renderProps) => disclosureButton({ ...renderProps, isInGroup })}
       >
-        {({isDisabled}) => (
+        {({ isDisabled }) => (
           <>
             <ChevronRight aria-hidden className={chevron({ isExpanded, isDisabled })} />
             {children}

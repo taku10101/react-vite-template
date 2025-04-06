@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   TextField as AriaTextField,
   TextFieldProps as AriaTextFieldProps,
@@ -6,7 +6,7 @@ import {
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
 import { Description, FieldError, Input, Label, fieldBorderStyles } from './Field';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
 const inputStyles = tv({
   extend: focusRing,

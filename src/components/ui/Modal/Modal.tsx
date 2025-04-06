@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ModalOverlay, ModalOverlayProps, Modal as RACModal } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
 

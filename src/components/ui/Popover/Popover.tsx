@@ -6,8 +6,8 @@ import {
   PopoverContext,
   useSlottedContext
 } from 'react-aria-components';
-import React from 'react';
-import {tv} from 'tailwind-variants';
+
+import { tv } from 'tailwind-variants';
 
 export interface PopoverProps extends Omit<AriaPopoverProps, 'children'> {
   showArrow?: boolean,
@@ -35,7 +35,7 @@ export function Popover({ children, showArrow, className, ...props }: PopoverPro
     <AriaPopover
       offset={offset}
       {...props}
-      className={composeRenderProps(className, (className, renderProps) => styles({...renderProps, className}))}>
+      className={composeRenderProps(className, (className, renderProps) => styles({ ...renderProps, className }))}>
       {showArrow &&
         <OverlayArrow className="group">
           <svg width={12} height={12} viewBox="0 0 12 12" className="block fill-white dark:fill-[#1f1f21] forced-colors:fill-[Canvas] stroke-1 stroke-black/10 dark:stroke-zinc-600 forced-colors:stroke-[ButtonBorder] group-placement-bottom:rotate-180 group-placement-left:-rotate-90 group-placement-right:rotate-90">

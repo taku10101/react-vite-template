@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import React from 'react';
+
 import {
   Select as AriaSelect,
   SelectProps as AriaSelectProps,
@@ -13,7 +13,7 @@ import { tv } from 'tailwind-variants';
 import { Description, FieldError, Label } from './Field';
 import { DropdownItem, DropdownSection, DropdownSectionProps } from './ListBox';
 import { Popover } from './Popover';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
 const styles = tv({
   extend: focusRing,

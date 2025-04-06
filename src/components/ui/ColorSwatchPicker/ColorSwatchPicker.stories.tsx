@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react';
-import { ColorSwatchPicker, ColorSwatchPickerItem } from '../ColorSwatchPicker/ColorSwatchPicker';
+import { ColorSwatchPicker, ColorSwatchPickerItem } from './ColorSwatchPicker';
 
 const meta: Meta<typeof ColorSwatchPicker> = {
   component: ColorSwatchPicker,

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   GridList as AriaGridList,
   GridListItem as AriaGridListItem,
@@ -7,8 +7,9 @@ import {
   GridListProps
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { Checkbox } from './Checkbox';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
+import { Checkbox } from '../Checkbox/Checkbox';
+
 
 export function GridList<T extends object>(
   { children, ...props }: GridListProps<T>

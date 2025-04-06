@@ -1,13 +1,13 @@
-import React from 'react';
 import {
   ColorSwatchPicker as AriaColorSwatchPicker,
   ColorSwatchPickerItem as AriaColorSwatchPickerItem,
   ColorSwatchPickerItemProps,
   ColorSwatchPickerProps
 } from 'react-aria-components';
-import {ColorSwatch} from './ColorSwatch';
-import {composeTailwindRenderProps, focusRing} from './story.ts';
-import {tv} from 'tailwind-variants';
+
+import { tv } from 'tailwind-variants';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
+import { ColorSwatch } from '../ColorSwatch/ColorSwatch';
 
 export function ColorSwatchPicker(
   { children, ...props }: Omit<ColorSwatchPickerProps, 'layout'>
@@ -27,7 +27,7 @@ const itemStyles = tv({
 export function ColorSwatchPickerItem(props: ColorSwatchPickerItemProps) {
   return (
     <AriaColorSwatchPickerItem {...props} className={itemStyles}>
-      {({isSelected}) => <>
+      {({ isSelected }) => <>
         <ColorSwatch />
         {isSelected && <div className="absolute top-0 left-0 w-full h-full border border-2 border-black dark:border-white outline outline-2 outline-white dark:outline-black -outline-offset-4 rounded-xs forced-color-adjust-none" />}
       </>}

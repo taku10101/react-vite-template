@@ -1,5 +1,5 @@
 import { Check } from 'lucide-react';
-import React from 'react';
+
 import {
   ListBox as AriaListBox,
   ListBoxItem as AriaListBoxItem,
@@ -12,9 +12,9 @@ import {
   composeRenderProps
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
-interface ListBoxProps<T> extends Omit<AriaListBoxProps<T>, 'layout' | 'orientation'> {}
+interface ListBoxProps<T> extends Omit<AriaListBoxProps<T>, 'layout' | 'orientation'> { }
 
 export function ListBox<T extends object>(
   { children, ...props }: ListBoxProps<T>
@@ -76,7 +76,7 @@ export function DropdownItem(props: ListBoxItemProps) {
   let textValue = props.textValue || (typeof props.children === 'string' ? props.children : undefined);
   return (
     <AriaListBoxItem {...props} textValue={textValue} className={dropdownItemStyles}>
-      {composeRenderProps(props.children, (children, {isSelected}) => <>
+      {composeRenderProps(props.children, (children, { isSelected }) => <>
         <span className="flex items-center flex-1 gap-2 font-normal truncate group-selected:font-semibold">
           {children}
         </span>

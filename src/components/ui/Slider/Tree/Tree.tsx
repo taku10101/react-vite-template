@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   Tree as AriaTree,
   TreeItem as AriaTreeItem,
@@ -11,7 +11,7 @@ import {
 import { ChevronRight } from "lucide-react";
 import { tv } from 'tailwind-variants';
 import { Checkbox } from './Checkbox';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
 const itemStyles = tv({
   extend: focusRing,
@@ -79,8 +79,8 @@ export function TreeItemContent({ children, ...props }: TreeItemContentProps) {
           <div className='shrink-0 w-[calc(calc(var(--tree-item-level)_-_1)_*_calc(var(--spacing)_*_3))]' />
           {hasChildItems ? (
             <Button slot="chevron" className={expandButton({ isDisabled })}>
-            <ChevronRight aria-hidden className={chevron({ isExpanded, isDisabled })} />
-          </Button>
+              <ChevronRight aria-hidden className={chevron({ isExpanded, isDisabled })} />
+            </Button>
           ) : <div className='shrink-0 w-8 h-8' />}
           {children}
         </div>

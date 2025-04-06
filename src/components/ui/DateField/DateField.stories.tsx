@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react';
-import React from 'react';
 import { Form } from 'react-aria-components';
-import { Button } from '../src/Button';
-import { DateField } from '../src/DateField';
+import { DateField } from './DateField';
+import { Button } from '../Button/Button';
+
 
 const meta: Meta<typeof DateField> = {
   component: DateField,

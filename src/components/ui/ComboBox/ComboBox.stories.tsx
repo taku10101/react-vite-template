@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react';
-import React from 'react';
 import { Form } from 'react-aria-components';
-import { Button } from '../src/Button';
-import { ComboBox, ComboBoxItem, ComboBoxSection } from '../src/ComboBox';
+import { ComboBox, ComboBoxItem, ComboBoxSection } from './ComboBox';
+import { Button } from '../Button/Button';
+
 
 const meta: Meta<typeof ComboBox> = {
   component: ComboBox,
@@ -53,7 +53,7 @@ export const Sections = (args: any) => (
       <ComboBoxItem id="Cauliflower">Cauliflower</ComboBoxItem>
       <ComboBoxItem id="Potatoes">Potatoes</ComboBoxItem>
     </ComboBoxSection>
-    </ComboBox>
+  </ComboBox>
 );
 
 Sections.args = {

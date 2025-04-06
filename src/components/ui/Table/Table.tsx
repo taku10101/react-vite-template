@@ -1,5 +1,5 @@
 import { ArrowUp } from 'lucide-react';
-import React from 'react';
+
 import {
   Cell as AriaCell,
   Column as AriaColumn,
@@ -22,7 +22,7 @@ import {
 import { twMerge } from 'tailwind-merge';
 import { tv } from 'tailwind-variants';
 import { Checkbox } from './Checkbox';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
 export function Table(props: TableProps) {
   return (
@@ -55,9 +55,8 @@ export function Column(props: ColumnProps) {
             <span className="truncate">{children}</span>
             {allowsSorting && (
               <span
-                className={`w-4 h-4 flex items-center justify-center transition ${
-                  sortDirection === 'descending' ? 'rotate-180' : ''
-                }`}
+                className={`w-4 h-4 flex items-center justify-center transition ${sortDirection === 'descending' ? 'rotate-180' : ''
+                  }`}
               >
                 {sortDirection && <ArrowUp aria-hidden className="w-4 h-4 text-gray-500 dark:text-zinc-400 forced-colors:text-[ButtonText]" />}
               </span>

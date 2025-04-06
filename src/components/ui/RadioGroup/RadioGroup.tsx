@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { Radio as RACRadio, RadioGroup as RACRadioGroup, RadioGroupProps as RACRadioGroupProps, RadioProps, ValidationResult } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
 import { Description, FieldError, Label } from './Field';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
 export interface RadioGroupProps extends Omit<RACRadioGroupProps, 'children'> {
   label?: string,

@@ -1,5 +1,4 @@
-import React from 'react';
-import {ColorThumb as AriaColorThumb, ColorThumbProps} from 'react-aria-components';
+import { ColorThumb as AriaColorThumb, ColorThumbProps } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
 
 const thumbStyles = tv({
@@ -24,7 +23,8 @@ export function ColorThumb(props: ColorThumbProps) {
       style={({ defaultStyle, isDisabled }) => ({
         ...defaultStyle,
         backgroundColor: isDisabled ? undefined : defaultStyle.backgroundColor,
-        boxShadow: '0 0 0 1px black, inset 0 0 0 1px black'}
+        boxShadow: '0 0 0 1px black, inset 0 0 0 1px black'
+      }
       )}
       className={thumbStyles} />
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Button, ColorPicker as AriaColorPicker, ColorPickerProps as AriaColorPickerProps, DialogTrigger } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
 import { ColorSwatch } from '../ColorSwatch/ColorSwatch';

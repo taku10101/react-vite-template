@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Toolbar as RACToolbar, ToolbarProps, composeRenderProps } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
 
@@ -18,7 +18,7 @@ export function Toolbar(props: ToolbarProps) {
       {...props}
       className={composeRenderProps(
         props.className,
-        (className, renderProps) => styles({...renderProps, className})
+        (className, renderProps) => styles({ ...renderProps, className })
       )} />
   );
 }

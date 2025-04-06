@@ -1,8 +1,8 @@
-import React from 'react';
+
 import { FieldErrorProps, Group, GroupProps, InputProps, LabelProps, FieldError as RACFieldError, Input as RACInput, Label as RACLabel, Text, TextProps, composeRenderProps } from "react-aria-components";
 import { twMerge } from 'tailwind-merge';
 import { tv } from 'tailwind-variants';
-import { composeTailwindRenderProps, focusRing } from "./story.ts";
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
 export function Label(props: LabelProps) {
   return <RACLabel {...props} className={twMerge('text-sm text-gray-500 dark:text-zinc-400 font-medium cursor-default w-fit', props.className)} />;
@@ -38,7 +38,7 @@ export const fieldGroupStyles = tv({
 });
 
 export function FieldGroup(props: GroupProps) {
-  return <Group {...props} className={composeRenderProps(props.className, (className, renderProps) => fieldGroupStyles({...renderProps, className}))} />;
+  return <Group {...props} className={composeRenderProps(props.className, (className, renderProps) => fieldGroupStyles({ ...renderProps, className }))} />;
 }
 
 export function Input(props: InputProps) {

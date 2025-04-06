@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   TimeField as AriaTimeField,
   TimeFieldProps as AriaTimeFieldProps,

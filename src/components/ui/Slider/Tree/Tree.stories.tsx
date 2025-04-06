@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react';
-import { Tree, TreeItem, TreeItemContent } from '../src/Tree';
-import React from 'react';
+import { Tree, TreeItem, TreeItemContent } from './Tree';
+
 
 const meta: Meta<typeof Tree> = {
   component: Tree,
@@ -13,38 +13,38 @@ const meta: Meta<typeof Tree> = {
 export default meta;
 
 export const Example = (args: any) => (
-<Tree aria-label="Files" style={{height: '400px', width: '300px'}} {...args}>
-  <TreeItem id="documents" textValue="Documents">
-    <TreeItemContent>
-      Documents
-    </TreeItemContent>
-    <TreeItem id="project" textValue="Project">
+  <Tree aria-label="Files" style={{ height: '400px', width: '300px' }} {...args}>
+    <TreeItem id="documents" textValue="Documents">
       <TreeItemContent>
-        Project
+        Documents
       </TreeItemContent>
-      <TreeItem id="report" textValue="Weekly Report">
+      <TreeItem id="project" textValue="Project">
         <TreeItemContent>
-          Weekly Report
+          Project
+        </TreeItemContent>
+        <TreeItem id="report" textValue="Weekly Report">
+          <TreeItemContent>
+            Weekly Report
+          </TreeItemContent>
+        </TreeItem>
+      </TreeItem>
+    </TreeItem>
+    <TreeItem id="photos" textValue="Photos">
+      <TreeItemContent>
+        Photos
+      </TreeItemContent>
+      <TreeItem id="one" textValue="Image 1">
+        <TreeItemContent>
+          Image 1
+        </TreeItemContent>
+      </TreeItem>
+      <TreeItem id="two" textValue="Image 2">
+        <TreeItemContent>
+          Image 2
         </TreeItemContent>
       </TreeItem>
     </TreeItem>
-  </TreeItem>
-  <TreeItem id="photos" textValue="Photos">
-    <TreeItemContent>
-      Photos
-    </TreeItemContent>
-    <TreeItem id="one" textValue="Image 1">
-      <TreeItemContent>
-        Image 1
-      </TreeItemContent>
-    </TreeItem>
-    <TreeItem id="two" textValue="Image 2">
-      <TreeItemContent>
-        Image 2
-      </TreeItemContent>
-    </TreeItem>
-  </TreeItem>
-</Tree>
+  </Tree>
 );
 
 Example.args = {
