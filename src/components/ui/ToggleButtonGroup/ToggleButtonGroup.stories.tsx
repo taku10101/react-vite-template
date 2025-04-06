@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react';
 
-import { ToggleButton } from './ToggleButton';
 import { ToggleButtonGroup } from './ToggleButtonGroup';
 import { Bold, Italic, Underline } from 'lucide-react'
+import { ToggleButton } from '../ToggleButton/ToggleButton';
 
 const meta: Meta<typeof ToggleButtonGroup> = {
   component: ToggleButtonGroup,

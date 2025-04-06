@@ -1,7 +1,7 @@
 
 import { Form } from 'react-aria-components';
-import { Button } from './Button';
 import { Radio, RadioGroup } from './RadioGroup';
+import { Button } from '../Button/Button';
 
 export default {
   title: 'RadioGroup',

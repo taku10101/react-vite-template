@@ -10,10 +10,11 @@ import {
   ValidationResult
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { Description, FieldError, Label } from './Field';
-import { DropdownItem, DropdownSection, DropdownSectionProps } from './ListBox';
-import { Popover } from './Popover';
+
 import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
+import { Description, FieldError, Label } from '../Field/Field';
+import { Popover } from '../Popover/Popover';
+import { DropdownItem, DropdownSection, DropdownSectionProps } from '../ListBox/ListBox';
 
 const styles = tv({
   extend: focusRing,

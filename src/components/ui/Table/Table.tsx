@@ -19,9 +19,8 @@ import {
   composeRenderProps,
   useTableOptions
 } from 'react-aria-components';
-import { twMerge } from 'tailwind-merge';
 import { tv } from 'tailwind-variants';
-import { Checkbox } from './Checkbox';
+import { Checkbox } from '../Checkbox/Checkbox'
 import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
 export function Table(props: TableProps) {

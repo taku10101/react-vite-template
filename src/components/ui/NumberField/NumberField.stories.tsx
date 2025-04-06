@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react';
 
 import { Form } from 'react-aria-components';
-import { Button } from './Button';
 import { NumberField } from './NumberField';
+import { Button } from '../Button/Button';
 
 const meta: Meta<typeof NumberField> = {
   component: NumberField,

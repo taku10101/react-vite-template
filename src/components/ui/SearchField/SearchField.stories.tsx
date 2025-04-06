@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react';
 
 import { Form } from 'react-aria-components';
-import { Button } from './Button';
 import { SearchField } from './SearchField';
+import { Button } from '../Button/Button';
 
 const meta: Meta<typeof SearchField> = {
   component: SearchField,

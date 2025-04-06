@@ -7,7 +7,7 @@ import {
   SliderTrack
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { Label } from './Field';
+import { Label } from '../Field/Field';
 import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
 
 const trackStyles = tv({

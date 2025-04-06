@@ -13,8 +13,8 @@ import {
   Header,
   Collection
 } from 'react-aria-components';
-import { dropdownItemStyles } from './ListBox';
-import { Popover, PopoverProps } from './Popover';
+import { Popover, PopoverProps } from '../Popover/Popover';
+import { dropdownItemStyles } from '../ListBox/ListBox';
 
 interface MenuProps<T> extends AriaMenuProps<T> {
   placement?: PopoverProps['placement']
