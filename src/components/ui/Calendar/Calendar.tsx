@@ -1,5 +1,4 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import React from 'react';
 import {
   Calendar as AriaCalendar,
   CalendarGridHeader as AriaCalendarGridHeader,
@@ -14,8 +13,9 @@ import {
   useLocale
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { Button } from './Button';
-import { focusRing } from './story.ts';
+import { focusRing } from '../../../utils/story';
+import { Button } from '../Button/Button';
+
 
 const cellStyles = tv({
   extend: focusRing,
@@ -53,7 +53,7 @@ export function Calendar<T extends DateValue>(
 }
 
 export function CalendarHeader() {
-  let {direction} = useLocale();
+  let { direction } = useLocale();
 
   return (
     <header className="flex items-center gap-1 pb-4 px-1 w-full">

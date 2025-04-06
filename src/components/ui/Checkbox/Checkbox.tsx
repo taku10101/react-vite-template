@@ -1,9 +1,10 @@
 import { Check, Minus } from 'lucide-react';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Checkbox as AriaCheckbox, CheckboxGroup as AriaCheckboxGroup, CheckboxGroupProps as AriaCheckboxGroupProps, CheckboxProps, ValidationResult, composeRenderProps } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { Description, FieldError, Label } from './Field';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { Description, FieldError, Label } from '../Field/Field';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
+
 
 export interface CheckboxGroupProps extends Omit<AriaCheckboxGroupProps, 'children'> {
   label?: string,
@@ -54,10 +55,10 @@ const iconStyles = 'w-4 h-4 text-white group-disabled:text-gray-400 dark:text-sl
 
 export function Checkbox(props: CheckboxProps) {
   return (
-    <AriaCheckbox {...props} className={composeRenderProps(props.className, (className, renderProps) => checkboxStyles({...renderProps, className}))}>
-      {({isSelected, isIndeterminate, ...renderProps}) => (
+    <AriaCheckbox {...props} className={composeRenderProps(props.className, (className, renderProps) => checkboxStyles({ ...renderProps, className }))}>
+      {({ isSelected, isIndeterminate, ...renderProps }) => (
         <>
-          <div className={boxStyles({isSelected: isSelected || isIndeterminate, ...renderProps})}>
+          <div className={boxStyles({ isSelected: isSelected || isIndeterminate, ...renderProps })}>
             {isIndeterminate
               ? <Minus aria-hidden className={iconStyles} />
               : isSelected

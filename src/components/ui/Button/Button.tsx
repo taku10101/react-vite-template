@@ -1,7 +1,6 @@
-import React from 'react';
 import { composeRenderProps, Button as RACButton, ButtonProps as RACButtonProps } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { focusRing } from './story.ts';
+import { focusRing } from '../../../utils/story';
 
 export interface ButtonProps extends RACButtonProps {
   variant?: 'primary' | 'secondary' | 'destructive' | 'icon'
@@ -32,7 +31,7 @@ export function Button(props: ButtonProps) {
       {...props}
       className={composeRenderProps(
         props.className,
-        (className, renderProps) => button({...renderProps, variant: props.variant, className})
+        (className, renderProps) => button({ ...renderProps, variant: props.variant, className })
       )} />
   );
 }

@@ -1,6 +1,5 @@
 import type { Meta } from '@storybook/react';
-import React from 'react';
-import { Autocomplete, AutocompleteItem, AutocompleteSection } from '../src/Autocomplete';
+import { Autocomplete, AutocompleteItem, AutocompleteSection } from './Autocomplete';
 
 const meta: Meta<typeof Autocomplete> = {
   component: Autocomplete,

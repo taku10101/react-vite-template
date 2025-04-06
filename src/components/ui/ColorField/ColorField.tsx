@@ -1,12 +1,12 @@
-import React from 'react';
 import {
   ColorField as AriaColorField,
   ColorFieldProps as AriaColorFieldProps,
   ValidationResult
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import { Description, FieldError, Input, Label, fieldBorderStyles } from './Field';
-import { composeTailwindRenderProps, focusRing } from './story.ts';
+import { Description, fieldBorderStyles, FieldError, Input, Label } from '../Field/Field';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
+
 
 const inputStyles = tv({
   extend: focusRing,

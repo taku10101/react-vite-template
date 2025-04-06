@@ -1,12 +1,12 @@
-import React from 'react';
 import {
   ColorArea as AriaColorArea,
   ColorAreaProps as AriaColorAreaProps
 } from 'react-aria-components';
-import { composeTailwindRenderProps } from './story.ts';
-import { ColorThumb } from './ColorThumb';
+import { composeTailwindRenderProps } from '../../../utils/story';
+import { ColorThumb } from '../ColorThumb/ColorThumb';
 
-export interface ColorAreaProps extends AriaColorAreaProps {}
+
+export interface ColorAreaProps extends AriaColorAreaProps { }
 
 export function ColorArea(props: ColorAreaProps) {
   return (

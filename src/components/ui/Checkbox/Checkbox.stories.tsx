@@ -1,4 +1,4 @@
-import { Checkbox } from '../src/Checkbox';
+import { Checkbox } from "./Checkbox";
 
 export default {
   title: 'Checkbox',

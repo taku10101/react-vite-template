@@ -1,9 +1,8 @@
 import { ChevronRight } from 'lucide-react';
-import React from 'react';
-import { Breadcrumb as AriaBreadcrumb, Breadcrumbs as AriaBreadcrumbs, BreadcrumbProps, BreadcrumbsProps, LinkProps } from 'react-aria-components';
+import { Breadcrumb as AriaBreadcrumb, Breadcrumbs as AriaBreadcrumbs, BreadcrumbProps, BreadcrumbsProps, Link, LinkProps } from 'react-aria-components';
 import { twMerge } from 'tailwind-merge';
-import { Link } from './Link';
-import { composeTailwindRenderProps } from './story.ts';
+import { composeTailwindRenderProps } from '../../../utils/story';
+
 
 export function Breadcrumbs<T extends object>(props: BreadcrumbsProps<T>) {
   return <AriaBreadcrumbs {...props} className={twMerge('flex gap-1', props.className)} />;

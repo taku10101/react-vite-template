@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react';
-import React from 'react';
-import { ColorField } from '../src/ColorField';
+import { ColorField } from './ColorField';
+
 
 const meta: Meta<typeof ColorField> = {
   component: ColorField,

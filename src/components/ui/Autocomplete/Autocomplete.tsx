@@ -10,8 +10,9 @@ import {
   MenuItemProps,
   useFilter,
 } from "react-aria-components";
-import { MenuItem } from "./Menu";
-import { SearchField } from "./SearchField";
+import { SearchField } from "../SearchField/SearchField";
+import { MenuItem } from "../Menu/Menu";
+
 
 export interface AutocompleteProps<T extends object> extends Omit<AriaAutocompleteProps, "children"> {
   children: React.ReactNode | ((item: T) => React.ReactNode);
