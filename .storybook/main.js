@@ -1,46 +1,18 @@
-const excludedProps = new Set([
-  'id',
-  'slot',
-  'onCopy',
-  'onCut',
-  'onPaste',
-  'onCompositionStart',
-  'onCompositionEnd',
-  'onCompositionUpdate',
-  'onSelect',
-  'onBeforeInput',
-  'onInput'
-]);
+import graphql from 'vite-plugin-graphql-loader';
 
-/** @type { import('@storybook/react-vite').StorybookConfig } */
-const config = {
-  stories: [
-    "../stories/**/*.mdx",
-    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-  ],
+export default {
+  // Replace your-framework with the framework you are using (e.g., react-vite, vue3-vite)
+  framework: '@storybook/react-vite',
+  stories: ['../src/**/*.mdx', '../*/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-onboarding",
-    "@storybook/addon-interactions",
+    '@storybook/addon-essentials',
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
   ],
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
+  async viteFinal(config) {
+    return {
+      ...config,
+      plugins: [...(config.plugins ?? []), graphql()],
+    };
   },
-  docs: {
-    autodocs: "tag",
-  },
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      compilerOptions: {
-        allowSyntheticDefaultImports: false,
-        esModuleInterop: false,
-      },
-      propFilter: (prop) => !prop.name.startsWith('aria-') && !excludedProps.has(prop.name),
-    },
-  }
 };
-export default config;
