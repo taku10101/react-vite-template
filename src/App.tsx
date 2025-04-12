@@ -1,8 +1,9 @@
+// src/App.tsx
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 
 // サブディレクトリを含む動的インポート
-const pages = import.meta.glob('./routes/**/*.tsx');
+const pages = import.meta.glob('./routes/**/page.tsx');
 const layouts = import.meta.glob('./routes/**/Layout.tsx', { eager: true });
 
 const App: React.FC = () => {
@@ -12,8 +13,9 @@ const App: React.FC = () => {
                 const Component = React.lazy(pages[path] as () => Promise<{ default: React.ComponentType<any> }>);
                 const routePath = path
                     .replace('./routes', '')
-                    .replace('.tsx', '')
+                    .replace('/page.tsx', '')
                     .replace(/\[([^\]]+)\]/g, ':$1')
+                    .replace(/\(([^)]+)\)/g, '') // ()で囲まれた部分を削除
                     .toLowerCase(); // ルートパスを小文字に変換
 
                 // 最も近いLayoutを探す
