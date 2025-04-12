@@ -2,8 +2,9 @@ import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
-import { Button } from "../ui/Button/Button";
+import { Button } from "../ui/Button/";
 import { z } from "zod";
+import { Form } from "../ui/Form";
 const sampleFormSchema = z.object({
     input: z.string().min(1),
     select: z.string().min(1),
@@ -16,11 +17,11 @@ const SampleForm = () => {
     const { handleSubmit } = methods;
     return (
         <FormProvider {...methods}>
-            <form onSubmit={handleSubmit((data) => console.log(data))}>
+            <Form onSubmit={handleSubmit((data) => console.log(data))}>
                 <InputField name='input' />
                 <SelectField name='select' />
                 <Button type='submit'>Submit</Button>
-            </form>
+            </Form>
         </FormProvider>
     );
 }
