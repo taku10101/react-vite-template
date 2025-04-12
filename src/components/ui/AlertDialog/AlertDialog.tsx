@@ -2,11 +2,11 @@ import { AlertCircleIcon, InfoIcon } from "lucide-react";
 import { ReactNode } from "react";
 import { Dialog } from "../Dialog/Dialog";
 import { Button } from "../Button/Button";
-import { DialogProps ,Heading} from "react-aria-components";
+import { DialogProps, Heading } from "react-aria-components";
 import { chain } from "react-aria";
 
 
-interface AlertDialogProps extends Omit<DialogProps, 'children'> {
+export interface AlertDialogProps extends Omit<DialogProps, 'children'> {
   title: string,
   children: ReactNode,
   variant?: 'info' | 'destructive',
