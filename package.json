@@ -41,6 +41,7 @@
     "@axe-core/playwright": "^4.10.1",
     "@hookform/resolvers": "^5.0.1",
     "axios": "^1.8.4",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.292.0",
     "postcss": "^8.4.31",
     "react-aria": "^3.38.1",
