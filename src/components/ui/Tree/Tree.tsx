@@ -1,4 +1,3 @@
-
 import {
   Tree as AriaTree,
   TreeItem as AriaTreeItem,
@@ -10,8 +9,8 @@ import {
 } from 'react-aria-components';
 import { ChevronRight } from "lucide-react";
 import { tv } from 'tailwind-variants';
-import { composeTailwindRenderProps, focusRing } from '../../../../utils/story';
-import { Checkbox } from '../../Checkbox/Checkbox';
+import { composeTailwindRenderProps, focusRing } from '../../../utils/story';
+import { Checkbox } from '../Checkbox/Checkbox';
 
 
 const itemStyles = tv({
