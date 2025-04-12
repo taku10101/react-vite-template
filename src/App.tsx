@@ -17,7 +17,13 @@ const App: React.FC = () => {
                     .toLowerCase(); // ルートパスを小文字に変換
 
                 // 最も近いLayoutを探す
-                const layoutPath = Object.keys(layouts).find(layoutPath => path.startsWith(layoutPath.replace('/Layout.tsx', '')));
+                const layoutPath = Object.keys(layouts).reduce((closest, layoutPath) => {
+                    if (path.startsWith(layoutPath.replace('/Layout.tsx', ''))) {
+                        return layoutPath.length > (closest?.length || 0) ? layoutPath : closest;
+                    }
+                    return closest;
+                }, undefined as string | undefined);
+
                 const LayoutComponent = layoutPath ? (layouts[layoutPath] as { default: React.ComponentType<any> }).default : React.Fragment;
 
                 return (
